@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/playerr.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/singlePlayer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>Single Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="./index.html"
+        ><i class="fa-solid fa-circle-left btn-back"></i
+      ></a>
+      <h1 class="title">Welcome to Treasure Guessing Game!</h1>
+      <h3 class="title-2">
+        Guess a letter from A-Z in order to get the tressure!
+      </h3>
+
+      <!-- modal for mechanics of the game -->
+      <button class="btn show-modal">Game Mechanics</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2>Game Mechanics:</h2>
+        <p class="tojustify">
+          To play the game, you have to guess a letter from A to Z. The input
+          must be a letter; Entering a non letter type would make a deduction to
+          your score 😐 Once you click the 'Check' button and if your guess is
+          incorrect, there will be a message telling you either 'Too high' or
+          'Too Low' from the secret letter. If you get 'Too High'(👆), it means
+          your guessed letter's index is beyond the secret letter's index. Same
+          logic applies if you get a message saying 'Too Low'(👇), but just the
+          opposite. Enjoy playing! 🥳
+        </p>
+      </div>
+
+      <div class="board"></div>
+      <div>
+        <form>
+          <div class="numbers">
+            <input type="letter" class="inp guess" />
+            <input value="?" class="inp number" />
+          </div>
+          <input type="button" value="Check!" class="btn check" />
+        </form>
+
+        <div>
+          <div class="toFlex">
+            <div class="scoring">
+              <p class="message">Make a Guess...</p>
+              <p class="score-label">Score: <span class="score">10</span></p>
+              <p class="highscore-label">
+                High Score: <span class="highscore">0</span>
+              </p>
+            </div>
+            <input type="button" value="Try Again" class="btn again" />
+          </div>
+        </div>
+      </div>
+      <img src="./images/mountain.png" alt="" class="mountain" />
+      <img src="./images/treasure.png" alt="" class="treasure" />
+
+      <footer>
+        <p>
+          &copy; May 2022 | Coded by <span class="name">Jasmin In-naka</span>
+        </p>
+      </footer>
+
+      <div class="overlay hidden"></div>
+    </div>
+    <script src="./js/singlePlayer.js"></script>
+  </body>
+</html>

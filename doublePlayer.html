@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/playerr.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/dualPlayer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>Dual Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Welcome to Treasure Guessing Game!</h1>
+      <h3>Guess a letter from A-Z in order to get the tressure!</h3>
+
+      <a href="./index.html"
+        ><i class="fa-solid fa-circle-left btn-back"></i
+      ></a>
+
+      <!-- modal for mechanics of the game -->
+      <button class="btn show-modal">Game Mechanics</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2>Game Mechanics:</h2>
+        <p class="tojustify">
+          To play the game, you have to guess a letter from A to Z. The input
+          must be a letter; Entering a non letter type would make a deduction to
+          your score 😐 Once you click the 'Check' button and if your guess is
+          incorrect, there will be a message telling you either 'Too high' or
+          'Too Low' from the secret letter. If you get 'Too High'(👆), it means
+          your guessed letter's index is beyond the secret letter's index. Same
+          logic applies if you get a message saying 'Too Low'(👇), but just the
+          opposite. Enjoy playing! 🥳
+        </p>
+      </div>
+      <input value="?" class="inp number" />
+
+      <!-- board 1 -->
+      <div class="boards">
+        <div class="board board1 player--0 player-active">
+          <form>
+            <div class="numbers">
+              <input type="letter" class="guess guess-0" />
+            </div>
+          </form>
+
+          <div>
+            <div class="toFlex">
+              <div class="scoring">
+                <p class="message message-0">Make a Guess...</p>
+                <p class="score-label">
+                  Score: <span class="score current-score--0">10</span>
+                </p>
+                <p class="highscore-label">
+                  High Score: <span class="highscore high-score--0">0</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="button" value="Check!" class="btn check" />
+
+        <!-- board 2 -->
+        <div class="board board2 player--1">
+          <form>
+            <div class="numbers numbers2">
+              <input type="letter" class="guess guess-1" />
+            </div>
+          </form>
+
+          <div>
+            <div class="toFlex">
+              <div class="scoring scoring2">
+                <p class="message message-1">Make a Guess...</p>
+                <p class="score-label">
+                  Score: <span class="score current-score--1">10</span>
+                </p>
+                <p class="highscore-label">
+                  High Score: <span class="highscore high-score--1">0</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./images/mountain.png" alt="" class="mountain" />
+      <img src="./images/treasure.png" alt="" class="treasure" />
+      <input type="button" value="Play Again" class="btn again" />
+    </div>
+    <footer>
+      <p class="footer">
+        &copy; May 2022 | Coded by <span class="name">Jasmin In-naka</span>
+      </p>
+    </footer>
+
+    <div class="overlay hidden"></div>
+
+    <script src="./js/dualPlayer.js"></script>
+  </body>
+</html>

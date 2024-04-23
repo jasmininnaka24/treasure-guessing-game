@@ -1,0 +1,95 @@
+.btns{
+  margin-top: 5.5rem;
+}
+
+.btn a{
+  color: var(--light-color);
+}
+.btn a:hover{
+  color: var(--primary-color);
+}
+
+.title{
+  margin-top: 6.5rem;
+}
+
+.show-modal{
+  font-size: 1.2rem;
+}
+
+.modal{
+  text-align: start;
+  position: absolute;
+  background: beige;
+  width: 40%;
+  height: 60%;
+  top: 9.5rem;
+  left: 30%;
+  right: 30%;
+  z-index: 5;
+  border-radius: 1rem;
+}
+.modal .close-modal{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #555;
+  font-weight: 600;
+}
+.modal .close-modal:hover{
+  opacity: .85;
+}
+.modal h2{
+  margin: 0;
+  padding: 1rem 1.5rem;
+  color: var(--primary-color);
+  font-family: var(--quicksand);
+  font-size: 2rem;
+}
+.modal p{
+  margin: 0;
+  padding: 1rem 1.5rem;
+  color: #555;
+  font-family: var(--quicksand);
+  font-size: 1.2rem;
+}
+
+
+.mountain{
+  width: 480px;
+  position: absolute;
+  top: 15rem;
+  left: 1.5rem;
+}
+.treasure{
+  width: 440px;
+  position: absolute;
+  top: 8rem;
+  right: 1.5rem;
+  /* z-index: 5; */
+}
+
+footer{
+  margin: 12rem auto 1.5rem auto;
+  color: var(--secondary-color);
+  font-family: var(--quicksand);
+  font-size: 1.2rem;
+}
+
+.name{
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media(max-width: 1250px){
+  .mountain{
+    display: none;
+  }
+  .treasure{
+    display: none;
+  }
+}

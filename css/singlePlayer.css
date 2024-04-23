@@ -1,0 +1,168 @@
+
+
+.guess{
+  text-transform: uppercase;
+}
+
+.title{
+  color: var(--primary-color);
+  font-family: var(--quicksand);
+  font-size: 2.6rem;
+  margin: 1.5rem auto -1rem auto;
+}
+
+.intro{
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  font-family: var(--quicksand);
+  margin-bottom: 4rem;
+  border: rgb(9, 68, 87) .2rem solid;
+}
+
+.guess, .number{
+  height: 7rem;
+  width: 12rem;
+  margin: 0 1rem 1rem 1rem;
+  border: rgb(9, 68, 87) solid .1rem;
+  border-radius: 2rem;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #555;
+  background-color: rgb(242, 251, 251);
+  display: inline-block;
+}
+.numbers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto 0 auto;
+}
+.check{
+  margin: 0 auto;
+}
+
+/* .toFlex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  margin: auto;
+} */
+
+h3{
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: var(--quicksand);
+  margin: 2rem auto;
+}
+
+
+.scoring{
+  margin: 1.8rem;
+}
+
+.score-label, .highscore-label, .message{
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-family: var(--quicksand);
+  line-height: 2.2rem;
+  letter-spacing: .2rem;
+}
+.score, .highscore{
+   font-family: var(--quicksand);
+   color: rgb(9, 68, 87);
+}
+
+.message{
+  font-size: 1.6rem;
+  color: #555;
+  margin: 1rem auto;
+  z-index: 100;
+  width: 35%;
+}
+
+.again{
+  margin-top: -.5rem;
+}
+
+.mountain{
+  width: 480px;
+  position: absolute;
+  top: 20rem;
+  left: 1.5rem;
+}
+.treasure{
+  width: 440px;
+  position: absolute;
+  top: 11rem;
+  right: 1.5rem;
+  /* z-index: 5; */
+}
+
+footer{
+  margin: 6rem auto 1.5rem auto;
+  color: var(--secondary-color);
+  font-family: var(--quicksand);
+  font-size: 1.2rem;
+}
+
+.name{
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+
+.hidden{
+  display: none;
+}
+
+.overlay{
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  backdrop-filter: blur(3px);
+}
+@media (max-width:1340px){
+  .btn-back{
+    position: absolute;
+    top: 5rem;
+    left: 100%;
+  }
+  .btn-back{
+    position: absolute;
+    top: 5.5rem;
+    left: 2rem;
+    font-size: 1.7rem;
+  }
+  .mountain{
+    width: 330px;
+    position: absolute;
+    top: 24rem;
+    left: 3rem;
+    display: inline-block;
+  }
+  .treasure{
+    width: 350px;
+    position: absolute;
+    top: 18rem;
+    right: 3rem;
+    display: inline-block;
+    /* z-index: 5; */
+  }
+}
+@media(max-width: 1080px){
+  
+  .mountain{
+    display: none;
+  }
+  .treasure{
+    display: none;
+  }
+  .message{
+    width: 100%;
+  }
+}
